@@ -1,0 +1,250 @@
+body { font-family: sans-serif;}
+.jumbotron {margin-top:20px;}
+/*NAVIGATION*/
+
+nav {
+  text-align: center;
+  /*background-color: rgb(124, 187, 252);*/
+}
+nav.fixed {
+  position:fixed;
+  top:0px;
+  right:0px;
+  left:0px;
+  z-index:999;
+}
+nav a {
+  text-decoration: none;
+  margin:0 auto;
+  padding-left: 35px;
+  padding-right: 35px;
+  font-size: 2em;
+  color: white;
+  font-weight: bold;
+}
+/*Side NAV*/
+.sidenav {height: 100%; width: 0; position: fixed; z-index: 1; top: 0; left: 0;
+  background-color: #111; overflow-x: hidden; transition: 0.5s; padding-top: 60px;}
+.sidenav a { padding: 8px 8px 8px 32px; text-decoration: none; font-size: 25px;
+  color: #818181; display: block; transition: 0.3s}
+.sidenav a:hover, .offcanvas a:focus{  color: #f1f1f1;}
+.closebtn { position: absolute; top: 0; right: 25px; font-size: 36px !important;
+  margin-left: 50px;}
+@media screen and (max-height: 450px) {.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}}
+#navBtn {display: none;}
+
+@media (max-width:780px){
+  .container-fluid .animsition{display:none;}
+  #navBtn{display: inline-block;}
+  #boom{margin-top:50px;}
+}
+
+
+/*MODAL*/
+div .modal-content {  max-width: 1100px;  margin:0 auto;}
+
+/*PHOTOS IN MODAL*/
+#container { height:500px; width:1100px;}
+#theTarget {  padding-left: 300px;}
+figure img {border-radius: 8px;margin-top: 10px;}
+
+/*BLOG PAGE*/
+.navText {
+  display: inline;
+  text-align: center;
+  padding-left:50px;
+  padding-right: 50px;
+  margin:20px;
+  font-size: 2em;
+  color: white;
+  /*background-color: rgb(240, 53, 4);*/
+
+}
+.form {
+  margin-left: 250px;
+}
+#blogPost  {
+  max-height: 700px;
+  max-width: 900px;
+  background-color:rgb(175, 188, 198);
+  color:red;
+}
+
+
+/*FOOD PAGE*/
+#restName {  margin-top: -500px;  margin-bottom: 400px;  margin-left: 700px;
+  font-size: 5em;}
+.push .menu-lk {  margin-top:0px;  margin-bottom:40px;  font-family:Lobster;
+  font-size:3.5em;  text-align: center;  padding: 25px;}
+#menu li a {  width: 160px;  margin-bottom: 20px;}
+#menuBtn {  margin-top: 10px;}
+#menuBtn h3 {  margin:10px auto;  font-size:2em;}
+
+
+/*STORE PAGE*/
+.box {display: inline-block;height:140px;width:140px;border: 2px black solid;margin-bottom: 10px;margin-left: 2px;}
+
+
+
+
+#animatedModal.animated {background-color: black;}
+
+
+        /*side nav*/
+    .nav-container {
+          /*position: absolute;*/
+          left: -50%;
+          top: 0;
+          background: lightblue;
+          height: 100%;
+          width: 150px;
+        }
+      .nav-list {
+          cursor: pointer;
+          list-style-type: none;
+          top: 50%;
+          text-align: center;
+          position: relative;
+          margin: 0;
+          padding: 0;
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+      .list-item {
+          margin: 20px auto;
+          border: 2px solid #fff;
+          width: 50px;
+          padding: 15px;
+          -webkit-transition: all 1s ease;
+          -moz-transition: all 1s ease;
+          -ms-transition: all 1s ease;
+          -o-transition: all 1s ease;
+          transition: all 1s ease;
+        }
+        .list-item:hover {
+          border: 2px solid #17BEBB;
+          -webkit-transition: all 1s ease;
+          -moz-transition: all 1s ease;
+          -ms-transition: all 1s ease;
+          -o-transition: all 1s ease;
+          transition: all 1s ease;
+        }
+        @keyframes
+        showNav { from { left: -100%; }
+        to { left: 0; }
+        }
+
+        @-webkit-keyframes
+        showNav { from { left: -100%; }
+        to { left: 0; }
+        }
+
+        @-moz-keyframes
+        showNav { from { left: -100%; }
+        to { left: 0; }
+        }
+
+        @-o-keyframes
+        showNav { from { left: -100%; }
+        to { left: 0; }
+        }
+        .showNav {
+          -webkit-animation: showNav .5s ease forwards;
+          -moz-animation: showNav 1s ease forwards;
+          -o-animation: showNav 1s ease forwards;
+          animation: showNav .5s ease forwards;
+        }
+        @keyframes
+        hideNav { from { left: 0; }
+        to { left: -100%; }
+        }
+        @-webkit-keyframes
+        hideNav { from {left: 0;}
+        to { left: -100%; }
+        }
+        @-moz-keyframes
+        hideNav { from {left: 0;  }
+        to { left: -100%; }
+        }
+        @-o-keyframes
+        hideNav { from { left: 0;}
+        to { left: -100%; }
+        }
+        .hideNav {
+          -webkit-animation: hideNav 1s ease forwards;
+          -moz-animation: hideNav 1s ease forwards;
+          -o-animation: hideNav 1s ease forwards;
+          animation: hideNav 1s ease forwards;
+        }
+        button {
+          background: none;
+          border: none;
+        }
+        .btn-nav:hover { cursor: pointer; }
+
+.btn-nav:hover .bar { background: #17BEBB; }
+
+.bar {
+  display: block;
+  height: 5px;
+  width: 50px;
+  background: #fff;
+  margin: 10px auto;
+}
+
+.btn-nav {
+  display: block;
+  padding: 15px 0;
+  width: 50px;
+  /*position: fixed;*/
+  left: 20px;
+  margin: 0 auto;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.btn-nav:focus { outline: none; }
+
+.middle { margin: 0 auto; }
+
+.bar {
+  -webkit-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  -o-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+.animated { z-index: 999; }
+
+.animated .arrow-top-r {
+  -webkit-transform: rotateZ(-45deg) translateY(11px);
+  -moz-transform: rotateZ(-45deg) translateY(11px);
+  -ms-transform: rotateZ(-45deg) translateY(11px);
+  -o-transform: rotateZ(-45deg) translateY(11px);
+  transform: rotateZ(-45deg) translateY(11px);
+  width: 25px;
+}
+
+.animated .arrow-middle-r {
+  -webkit-transform: translateX(25px);
+  -moz-transform: translateX(25px);
+  -ms-transform: translateX(25px);
+  -o-transform: translateX(25px);
+  transform: translateX(25px);
+}
+
+.animated .arrow-bottom-r {
+  -webkit-transform: rotateZ(45deg) translateY(-11px);
+  -moz-transform: rotateZ(45deg) translateY(-11px);
+  -ms-transform: rotateZ(45deg) translateY(-11px);
+  -o-transform: rotateZ(45deg) translateY(-11px);
+  transform: rotateZ(45deg) translateY(-11px);
+  width: 25px;
+}
