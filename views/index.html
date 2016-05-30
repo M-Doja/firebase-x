@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/0.4.0/firebase-ui-auth.css" />
     <!-- default css -->
     <link rel="stylesheet" href="css/site.css">
     <title>Appbuild | S.E.</title>
@@ -78,11 +79,30 @@
     <br />
     <br />
     <h4>Login with</h4>
-    <a href="#" class="btn btn-primary bt-social" data-provider="facebook">Facebook</a>
+    <!-- <a href="#" class="btn btn-primary bt-social" data-provider="facebook">Facebook</a>
     <a href="#" class="btn btn-info bt-social" data-provider="twitter">Twitter</a>
     <a href="#" class="btn btn-danger bt-social" data-provider="google">Google+</a>
     <a href="#" class="btn btn-default bt-social" data-provider="github">GitHub</a>
-    <a href="#" class="btn btn-warning" id="btAnon">Anon</a>
+    <a href="#" class="btn btn-warning" id="btAnon">Anon</a> -->
+    <button href="#" class="firebaseui-idp-button mdl-button mdl-js-button mdl-button--raised firebaseui-idp-google firebaseui-id-idp-button " data-provider="google">
+      <img class="firebaseui-idp-icon" src="https://www.gstatic.com/firebasejs/staging/3.0.0/auth/images/google.svg" alt="" />
+      <span class="firebaseui-idp-text firebaseui-idp-text-long">Sign in with Google+</span>
+      </button>
+
+   <button href="#" class="firebaseui-idp-button mdl-button mdl-js-button mdl-button--raised firebaseui-idp-facebook firebaseui-id-idp-button " data-provider="facebook" data-upgraded=",MaterialButton">
+     <img  class="firebaseui-idp-icon"  src="https://www.gstatic.com/firebasejs/staging/3.0.0/auth/images/facebook.svg" alt="" />
+     <span class="firebaseui-idp-text firebaseui-idp-text-long">Sign in with Facebook</span>
+   </button>
+
+   <button href="#" class="firebaseui-idp-button mdl-button mdl-js-button mdl-button--raised firebaseui-idp-twitter firebaseui-id-idp-button " data-provider="twitter" data-upgraded=",MaterialButton">
+     <img  class="firebaseui-idp-icon"  src="https://www.gstatic.com/firebasejs/staging/3.0.0/auth/images/twitter.svg" alt="" />
+     <span class="firebaseui-idp-text firebaseui-idp-text-long">Sign in with Twitter</span>
+   </button>
+
+   <button href="#" class="firebaseui-idp-button mdl-button mdl-js-button mdl-button--raised firebaseui-idp-github firebaseui-id-idp-button " data-provider="github" data-upgraded=",MaterialButton">
+     <img class="firebaseui-idp-icon" src="https://www.gstatic.com/firebasejs/staging/3.0.0/auth/images/github.svg" alt="" />
+     <span class="firebaseui-idp-text firebaseui-idp-text-long">Sign in with Github</span>
+   </button>
   </form>
   <!-- / LOGIN -->
 
