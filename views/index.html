@@ -28,243 +28,215 @@
     <div class="container animsition" data-animsition-out-class="fade-in-left"
     data-animsition-out-duration="2000">
 
-    
 
-      <div class="row">
-        <header class="navbar navbar-static-top navbar-inverse" id="top" role="banner">
-            <div class="container ">
-                <div class="navbar-header">
-                    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse"> <span class="sr-only">Toggle navigation</span>
-                       <span class="icon-bar"></span>
-                       <span class="icon-bar"></span>
-                       <span class="icon-bar"></span>
-                     </button>
+    <!--=========== HEADER ===========-->
 
-                     <a href="#" class="navbar-brand" style="margin-left:10px;">Welcome</a>
-                </div>
+<header class="navbar navbar-static-top navbar-inverse" id="top" role="banner">
+  <!-- <div class="container "> -->
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#" class="navbar-brand" style="margin-left:10px;">Welcome To Shake Events</a>
+    </div>
+    <nav style="background-color:#222" class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav ">
+        <li> <a href="#/">Login</a></li>
+        <li> <a href="#/logout">Logout</a></li>
+        <li> <a href="#/register">Register</a></li>
+        <li> <a href="#/profile">Profile</a></li>
+        <li> <a href="#/shop">Shop</a></li>
+        <li> <a href="#/dash">Dash</a></li>
+      </ul>
+    </nav>
+    <!-- banner -->
 
-                <nav style="background-color:#222" class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-                    <ul class="nav navbar-nav ">
-                        <li> <a href="/">Return Back Home</a>
+  <!-- </div> -->
+  <div class="jumbotron text-center" style="margin:10px;">
+    <h1>Shake Events</h1>
+  </div>
+</header>
 
-                        </li>
-                        <li> <a href="#/">Login</a>
+<!--============ LOGIN FORM ============-->
 
-                        </li>
-                        <li> <a href="#/logout">Logout</a>
-
-                        </li>
-                        <li> <a href="#/register">Register</a>
-
-                        </li>
-                        <li> <a href="#/profile">Profile</a>
-
-                        </li>
-                        <li> <a href="#/shop">Shop</a>
-
-                        </li>
-                    </ul>
-                </nav>
-                <!-- banner -->
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="jumbotron">
-                    <h1 style="font-family:ariel black;">MyGoods</h1>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-        </header>
-        <div id="container" class="container">
-
-            <!-- LOGIN -->
-            <form id="frmLogin" role="form">
-                 <h2>Login</h2>
-                <div class="form-group">
-                    <label for="txtEmail">Email address</label>
-                    <input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="email" />
-                </div>
-                <div class="form-group">
-                    <label for="txtPass">Password</label>
-                    <input type="password" class="form-control" id="txtPass" placeholder="Password" name="password" />
-                </div>
-                <button type="submit" class="btn btn-default btn-block">Login</button>
-                <br />
-                <br />
-                 <h4>Login with</h4>
-                <a href="#" class="btn btn-primary bt-social" data-provider="facebook">Facebook</a>
-                <a href="#" class="btn btn-info bt-social" data-provider="twitter">Twitter</a>
-                <a href="#" class="btn btn-danger bt-social" data-provider="google">Google+</a>
-                <a href="#" class="btn btn-default bt-social" data-provider="github">GitHub</a>
-                <a href="#" class="btn btn-warning" id="btAnon">Anon</a>
-            </form>
-            <!-- / LOGIN -->
+<div id="container" class="container">
+  <!-- LOGIN -->
+  <form id="frmLogin" role="form">
+    <h2>Login</h2>
+    <div class="form-group">
+      <label for="txtEmail">Email address</label>
+      <input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="email" />
+    </div>
+    <div class="form-group">
+      <label for="txtPass">Password</label>
+      <input type="password" class="form-control" id="txtPass" placeholder="Password" name="password" />
+    </div>
+    <button type="submit" class="btn btn-default btn-block">Login</button>
+    <br />
+    <br />
+    <h4>Login with</h4>
+    <a href="#" class="btn btn-primary bt-social" data-provider="facebook">Facebook</a>
+    <a href="#" class="btn btn-info bt-social" data-provider="twitter">Twitter</a>
+    <a href="#" class="btn btn-danger bt-social" data-provider="google">Google+</a>
+    <a href="#" class="btn btn-default bt-social" data-provider="github">GitHub</a>
+    <a href="#" class="btn btn-warning" id="btAnon">Anon</a>
+  </form>
+  <!-- / LOGIN -->
 
 
-            <!-- LOGOUT -->
-            <form id="frmLogout" role="form">
-                 <h2>You are logged out!</h2>
-                 <br><br>
-                 <div style="background-color:yellow;width:100%;width:300px;text-center">
-                   <h4 >Currently Under Construction</h4>
-                 </div>
-            </form>
-            <!-- / LOGOUT -->
+  <!--=========== LOGOUT FORM ===========-->
+
+  <form id="frmLogout" role="form" style="text-align:center;">
+    <h2>You are logged out!</h2>
+    <br>
+    <br>
+    <div style="background-color:yellow;width:100%;width:300px;margin:10px auto;">
+      <h4><a href="#/">Retun to Login</a></h4>
+    </div>
+  </form>
+  <!-- / LOGOUT -->
 
 
-            <!-- REGISTER -->
-            <form id="frmRegister" role="form">
-                 <h2>Register</h2>
-                <div class="form-group">
-                    <label for="txtRegEmail">Email address</label>
-                    <input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="email" />
-                </div>
-                <div class="form-group">
-                    <label for="txtRegPass">Password</label>
-                    <input type="password" class="form-control" id="txtPass" placeholder="Password" name="password" />
-                </div>
-                <button type="submit" class="btn btn-default">Register</button>
-            </form>
-            <!-- / REGISTER -->
+  <!--========== REGISTER FORM ==========-->
+
+  <form id="frmRegister" role="form">
+    <h2>Register</h2>
+    <div class="form-group">
+      <label for="txtRegEmail">Email address</label>
+      <input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="email" />
+    </div>
+    <div class="form-group">
+      <label for="txtRegPass">Password</label>
+      <input type="password" class="form-control" id="txtPass" placeholder="Password" name="password" />
+    </div>
+    <button type="submit" class="btn btn-default">Register</button>
+  </form>
+  <!-- / REGISTER -->
 
 
-            <!-- PROFILE -->
-            <form id="frmProfile" role="form">
-                 <h2>Profile</h2>
-                <br />
-                <div class="form-group">
-                    <label for="userName">User Name</label>
-                    <input type="text" class="form-control" id="userName" placeholder="User Name" name="userName" />
-                </div>
-                <div class="form-group">
-                    <label for="fName">First Name</label>
-                    <input type="text" class="form-control" id="fName" placeholder="First Name" name="fName" />
-                </div>
-                <div class="form-group">
-                    <label for="lName">Last Name</label>
-                    <input type="text" class="form-control" id="lName" placeholder="Last Name" name="lName" />
-                </div>
-                <div class="form-group">
-                    <label for="tagLine">Tag Line</label>
-                    <input type="text" class="form-control" id="tagLine" placeholder="Tag Line" name="tagLine" />
-                </div>
-                <div class="form-group">
-                    <label for="proPhoto">Photo</label>
-                    <input type="text" class="form-control" id="proPhoto" placeholder="Photo Url" name="photo" />
-                </div>
-                <div class="form-group">
-                    <label for="groupName">Group Name</label>
-                    <input type="text" class="form-control" id="groupName" placeholder="Group Name" name="groupName" />
-                </div>
-                <div class="form-group">
-                    <label for="ddlDino">User Role</label>
-                    <select id="ddlDino" name="memberGrp" class="form-control">
-                        <option>User Member</option>
-                        <option>Venue Admin</option>
-                        <option>Promoter</option>
-                    </select>
-                </div>
-                <div class="panel-group" id="accordionTwo">
-                	<div class="panel panel-default">
-                		<div class="panel-heading">
-                			<h4 class="panel-title">
-                				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionTwo" href="#collapseFour">Optional Advanced Settings</a>
-                			</h4>
-                		</div>
-                		<div class="panel-collapse collapse" id="collapseFour">
-                			<!-- <div class="panel-body">
-                				Here you can provide additional profile settings
-                			</div> -->
-                			<div class="list-group" style="padding:2% 5%;margin-bottom:.6em;background:#aaa;">
-                        <label for="userEmail">Email Address</label>
-                        <input type="email" class="form-control" id="userEmail" placeholder="Email Address" name="userEmail" />
+  <!--========== ADD PROFILE FORM ==========-->
 
-                        <label for="userStateLoc">State</label>
-                        <input type="text" class="form-control" id="userStateLoc" placeholder="State" name="userStateLoc" />
+  <form id="frmProfile" role="form">
+    <h2>Profile</h2>
+    <br />
+    <div class="form-group">
+      <label for="txtName">Name</label>
+      <input type="text" class="form-control" id="txtName" placeholder="Name" name="name" />
+    </div>
+    <div class="form-group">
+      <label for="proPhoto">Photo</label>
+      <input type="text" class="form-control" id="proPhoto" placeholder="Photo Url" name="photo" />
+    </div>
+    <div class="form-group">
+      <label for="companyName">Company Name</label>
+      <input type="text" class="form-control" id="companyName" placeholder="Company Name" name="companyName" />
+    </div>
+    <div class="form-group">
+      <label for="ddlDino">Member Group</label>
+      <select id="ddlDino" name="memberGrp" class="form-control">
+        <option>Shopper</option>
+        <option>Personal Seller</option>
+        <option>Corporate Seller</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+  <div class="row">
+    <div class="col-md-12" id="showHere">
+      <h1>show here</h1>
+    </div>
+  </div>
+  <!-- / ADD PROFILE -->
 
-                        <label for="userCityLoc">City</label>
-                        <input type="text" class="form-control" id="userCityLoc" placeholder="City" name="userCityLoc" />
+  <!--============== SHOP FORM ==============-->
 
-                        <label for="userCountryLoc">Country</label>
-                        <input type="text" class="form-control" id="userCountryLoc" placeholder="Country" name="userCountryLoc" />
-                			</div>
-                    </div>
-                <button style="margin:1em;"type="submit" class="btn btn-primary">Update</button>
-            </form>
-            <hr>
-            <div class="row">
-              <div class="col-md-12" id="showHere">
-                <h1>show here</h1>
-              </div>
-            </div>
-            <!-- / PROFILE -->
+  <form id="frmShop" role="form">
+    <div class="row container">
 
-            <!-- SHOP -->
-            <form id="frmShop" role="form">
-              <div class="row container">
+      <div class="col-md-4" id="showHere">
+        <h1></h1>
+      </div>
+      <!-- end of col md-4 -->
 
-                <div class="col-md-4" id="showHere">
-                  <h1></h1>
-                </div> <!-- end of col md-4 -->
+      <div class="col-md-8 text-center" id="" style="margin-top:-5px;">
+        <h2>Welcome to MyGoods!</h2>
+        <div class="row">
+          <h1>Home Goods</h1>
+          <div class="box ">
+            <h4>box 1</h4>
+          </div>
+          <div class="box ">
+            <h4>box 2</h4>
+          </div>
+          <div class="box ">
+            <h4>box 3</h4>
+          </div>
+          <div class="box ">
+            <h4>box 4</h4>
+          </div>
+        </div>
 
-                <div class="col-md-8 text-center" id="" style="margin-top:-5px;">
-                  <h2>Welcome to MyGoods!</h2>
-                  <div class="row">
-                    <h1>Home Goods</h1>
-                    <div class="box ">
-                      <h4>box 1</h4>
-                    </div>
-                    <div class="box ">
-                      <h4>box 2</h4>
-                    </div>
-                    <div class="box ">
-                      <h4>box 3</h4>
-                    </div>
-                    <div class="box ">
-                      <h4>box 4</h4>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                      <h1>Clothing</h1>
-                    <div class="box ">
-                      <h4>box 5</h4>
-                    </div>
-                    <div class="box ">
-                      <h4>box 6</h4>
-                    </div>
-                    <div class="box">
-                      <h4>box 7</h4>
-                    </div>
-                    <div class="box" >
-                      <h4>box 8</h4>
-                    </div>
-                  </div>
+        <div class="row">
+          <h1>Clothing</h1>
+          <div class="box ">
+            <h4>box 5</h4>
+          </div>
+          <div class="box ">
+            <h4>box 6</h4>
+          </div>
+          <div class="box">
+            <h4>box 7</h4>
+          </div>
+          <div class="box">
+            <h4>box 8</h4>
+          </div>
+        </div>
 
 
 
-                  <div class="row">
-                    <h1>Electronics</h1>
-                    <div class="box">
-                      <h4>box 9</h4>
-                    </div>
-                    <div class="box">
-                      <h4>box 10</h4>
-                    </div>
-                    <div class="box">
-                      <h4>box 11</h4>
-                    </div>
-                    <div class="box">
-                      <h4>box 12</h4>
-                    </div>
-                  </div>
+        <div class="row">
+          <h1>Electronics</h1>
+          <div class="box">
+            <h4>box 9</h4>
+          </div>
+          <div class="box">
+            <h4>box 10</h4>
+          </div>
+          <div class="box">
+            <h4>box 11</h4>
+          </div>
+          <div class="box">
+            <h4>box 12</h4>
+          </div>
+        </div>
 
-                </div> <!-- end of col md-8 -->
-              </div> <!-- end of row -->
-            </form>
-            <!-- / SHOP -->
-            <hr />
+      </div>
+      <!-- end of col md-8 -->
+    </div>
+    <!-- end of row -->
+  </form>
+  <!-- / SHOP -->
+
+  <!--==========  DASH FORM ==========-->
+
+  <form id="frmDash" role="form">
+    <div class="row container">
+
+      <div class="col-md-4" id="showHere">
+        <h1>Welcome to your dash!</h1>
+      </div>
+      <!-- end of col md-4 -->
+
+
+
+    </div>
+    <!-- end of row -->
+  </form>
+  <!-- /  DASH -->
+  <hr />
 
             <!-- ALERT BOX -->
             <div id="alert" class="alert" role="alert">
@@ -276,21 +248,14 @@
         </div>
       </div>
 
-
-
-
-
-
-
-
     </div> <!-- end of container -->
-    <div class="row text-center">
+    <!-- <div class="row text-center">
       <div class="col-sm-12">
         <footer style="color:black">&copy 2016 Phoja Unlimited LLC<p>
           <a href="#">Back to top</a>
         </p></footer>
       </div>
-    </div>
+    </div> -->
 
 
     <!-- jquery -->

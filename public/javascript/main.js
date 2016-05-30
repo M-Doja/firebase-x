@@ -9,23 +9,23 @@
       document.getElementById('showHere').innerHTML = '';
       console.log(snapshot.val());
       var res = snapshot.val();
-      var Users = [];
-      var user;
-      for (var prop in res){
-         for(var prop2 in res[prop]) {
-           user = res[prop][prop2];
-           Users.push(user);
-           console.log(Users);
-           for (var i = 0; i < Users.length; i++) {
-             console.log(Users[i]);
-           }
-           console.log(user.fName);
-           var str = "<h1>" +user.fName + "</h1><br><h4>" + user.groupName + "<br>"
-           + user.tagLine + "<br>"
-           + "<img src='"+ user.photo+"'> ";
-           document.getElementById('showHere').innerHTML += str;
-         }
-       }
+      // var Users = [];
+      // var user;
+      // for (var prop in res){
+      //    for(var prop2 in res[prop]) {
+      //      user = res[prop][prop2];
+      //      Users.push(user);
+      //      console.log(Users);
+      //      for (var i = 0; i < Users.length; i++) {
+      //        console.log(Users[i]);
+      //      }
+      //      console.log(user.fName);
+      //      var str = "<h1>" +user.fName + "</h1><br><h4>" + user.groupName + "<br>"
+      //      + user.tagLine + "<br>"
+      //      + "<img src='"+ user.photo+"'> ";
+      //      document.getElementById('showHere').innerHTML += str;
+      //    }
+      //  }
     }, function (errorObject) {
       console.log("The read failed: " + errorObject.code);
     });
@@ -53,6 +53,11 @@
             '#/profile': {
             form: 'frmProfile',
             controller: 'profile',
+            authRequired: true // must be logged in to get here
+        },
+            '#/dash': {
+            form: 'frmDash',
+            controller: 'dash',
             authRequired: true // must be logged in to get here
         },
     };
@@ -246,6 +251,10 @@
         var userRef;
     };
 
+    controllers.dash = function (form) {
+        var user = rootRef.getAuth();
+        var userRef;
+    };
     controllers.profile = function (form) {
         // Check the current user
         var user = rootRef.getAuth();
@@ -375,6 +384,7 @@
     Path.map("#/register").to(prepRoute);
     Path.map("#/profile").to(prepRoute);
     Path.map("#/shop").to(prepRoute);
+    Path.map("#/dash").to(prepRoute);
 
     Path.root("#/logout");
 
