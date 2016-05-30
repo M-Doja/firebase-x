@@ -1,6 +1,6 @@
 (function (jQuery, Firebase, Path) {
     "use strict";
-
+    $(".hideDash").css("display", "none");
     // the main firebase reference
     var rootRef = new Firebase('https://shakedown.firebaseio.com/web/uauth');
 
@@ -30,6 +30,21 @@
       console.log("The read failed: " + errorObject.code);
     });
 
+    var isNewUser = true;
+    rootRef.onAuth(function(authData) {
+      if (authData && isNewUser) {
+        $(".hideDash").css('display', 'inline')
+        // save the user's profile into the database so we can list users,
+        // use them in Security and Firebase Rules, and show profiles
+        // rootRef.child("users").child(authData.uid).set({
+        //   provider: authData.provider,
+        //   name: getName(authData),
+        //   data: authData
+        // });
+        // the user's data
+        console.log(authData);
+      }
+    });
 
     // pair our routes to our form elements and controller
     var routeMap = {
@@ -104,10 +119,11 @@
 
             if (user) {
                 deferred.resolve(user);
+
             }
 
         });
-
+          $("#hideDash").css("display", "inline");
         return deferred.promise();
     }
 
@@ -227,6 +243,7 @@
 
     // logout immediately when the controller is invoked
     controllers.logout = function (form) {
+      $(".hideDash").css("display", "none");
         rootRef.unauth();
         document.getElementById('showHere').innerHTML = '';
     };
