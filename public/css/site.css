@@ -2,6 +2,9 @@ body { font-family: sans-serif;}
 .jumbotron {margin-top:20px;}
 /*NAVIGATION*/
 
+.dashDisplay {border: 2px solid #000;}
+#demo {float:left;}
+.shortPanel {max-width:400px;margin:0 auto;width:100%}
 nav {
   text-align: center;
   /*background-color: rgb(124, 187, 252);*/

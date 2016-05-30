@@ -1,6 +1,11 @@
 (function (jQuery, Firebase, Path) {
     "use strict";
     $(".hideDash").css("display", "none");
+
+
+
+
+
     // the main firebase reference
     var rootRef = new Firebase('https://shakedown.firebaseio.com/web/uauth');
 
@@ -60,9 +65,9 @@
             form: 'frmRegister',
             controller: 'register'
         },
-            '#/shop': {
-            form: 'frmShop',
-            controller: 'shop',
+            '#/pro': {
+            form: 'frmPro',
+            controller: 'pro',
             authRequired: true // must be logged in to get here
         },
             '#/profile': {
@@ -73,6 +78,16 @@
             '#/dash': {
             form: 'frmDash',
             controller: 'dash',
+            authRequired: true // must be logged in to get here
+        },
+            '#/settings': {
+            form: 'frmSettings',
+            controller: 'settings',
+            authRequired: true // must be logged in to get here
+        },
+            '#/add_profile': {
+            form: 'frmAdd_Profile',
+            controller: 'add_profile',
             authRequired: true // must be logged in to get here
         },
     };
@@ -216,20 +231,16 @@
             e.preventDefault();
             handleAuthResponse(loginPromise, 'dash');
             document.getElementById('showHere').innerHTML = '';
-
         });
 
         // Social buttons
         form.children('.bt-social').on('click', function (e) {
-
             var $currentButton = $(this);
             var provider = $currentButton.data('provider');
             var socialLoginPromise;
             e.preventDefault();
-
             socialLoginPromise = thirdPartyLogin(provider);
             handleAuthResponse(socialLoginPromise, 'profile');
-
         });
 
         form.children('#btAnon').on('click', function (e) {
@@ -246,21 +257,18 @@
     };
 
     controllers.register = function (form) {
-
         // Form submission for registering
         form.on('submit', function (e) {
             var userAndPass = $(this).serializeObject();
             var loginPromise = createUserAndLogin(userAndPass);
-            e.preventDefault();
+         e.preventDefault();
 
             handleAuthResponse(loginPromise, 'profile');
             document.getElementById('showHere').innerHTML = '';
-
         });
-
     };
 
-    controllers.shop = function (form) {
+    controllers.pro = function (form) {
         var user = rootRef.getAuth();
         var userRef;
     };
@@ -269,22 +277,26 @@
         var user = rootRef.getAuth();
         var userRef;
     };
+
+    controllers.add_profile = function (form) {
+        var user = rootRef.getAuth();
+        var userRef;
+    };
+
     controllers.profile = function (form) {
         // Check the current user
         var user = rootRef.getAuth();
         var userRef;
-
         // If no current user send to register page
         if (!user) {
             routeTo('register');
             return;
         }
-
         // Load user info
         userRef = rootRef.child('users').child(user.uid);
         userRef.once('value', function (snap) {
             var user = snap.val();
-// RELOADS THE PAGE TO RETRIEVE DATA FROM DB
+    // RELOADS THE PAGE TO RETRIEVE DATA FROM DB
             if( window.localStorage )
           {
             if( !localStorage.getItem('firstLoad') )
@@ -298,7 +310,6 @@
             if (!user) {
                 return;
             }
-
             // set the fields
             form.find('#userName').val(user.userName);
             form.find('#fName').val(user.Fname);
@@ -323,22 +334,26 @@
             form.find('#userGroupMembers').val(user.GroupMembers);
             form.find('#userPoints').val(user.Points);
         });
-
         // Save user's info to Firebase
         form.on('submit', function (e) {
             e.preventDefault();
             var userInfo = $(this).serializeObject();
-
             userRef.set(userInfo, function onComplete() {
-
                 // show the message if write is successful
                 showAlert({
                     title: 'Successfully saved!',
                     detail: 'You are still logged in',
                     className: 'alert-success'
                 });
+                routeTo('dash');
             });
         });
+
+    };
+
+    controllers.settings = function (form) {
+        var user = rootRef.getAuth();
+        var userRef;
     };
 
     /// Routing
@@ -397,8 +412,10 @@
     Path.map("#/logout").to(prepRoute);
     Path.map("#/register").to(prepRoute);
     Path.map("#/profile").to(prepRoute);
-    Path.map("#/shop").to(prepRoute);
+    Path.map("#/add_profile").to(prepRoute);
+    Path.map("#/pro").to(prepRoute);
     Path.map("#/dash").to(prepRoute);
+    Path.map("#/settings").to(prepRoute);
 
     Path.root("#/logout");
 
