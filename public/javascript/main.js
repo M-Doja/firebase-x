@@ -209,16 +209,13 @@
     ////////////////////////////////////////
 
     controllers.login = function (form) {
-
         // Form submission for logging in
         form.on('submit', function (e) {
-
             var userAndPass = $(this).serializeObject();
             var loginPromise = authWithPassword(userAndPass);
             e.preventDefault();
-
-            handleAuthResponse(loginPromise, 'profile');
-            // document.getElementById('showHere').innerHTML = '';
+            handleAuthResponse(loginPromise, 'dash');
+            document.getElementById('showHere').innerHTML = '';
 
         });
 
