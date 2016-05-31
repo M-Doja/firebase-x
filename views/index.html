@@ -132,7 +132,9 @@
   </form>
   <!-- / REGISTER -->
 
-  <!--========== ADD PROFILE FORM ==========-->
+
+
+  <!--========== (HIDDEN FROM NAV) ADD PROFILE FORM ==========-->
 
   <form id="frmProfile" role="form">
     <h2>Add A Profile</h2>
@@ -173,9 +175,6 @@
             </h4>
           </div>
           <div class="panel-collapse collapse" id="collapseFive">
-            <!-- <div class="panel-body">
-              Here you can provide additional profile settings
-            </div> -->
             <div class="list-group" style="padding:2% 5%;margin-bottom:.6em;background:#aaa;">
               <label for="userEmail">Email Address</label>
               <input type="email" class="form-control" id="userEmail" placeholder="Email Address" name="userEmail" />
@@ -296,8 +295,11 @@
   <form id="frmDash" role="form" style="text-align:center;">
     <div class="row container">
       <div class="col-md-12" id="showHere">
-        <h1>Welcome to your dash!</h1>
+        <h1>Welcome to your dash <span class="name"></span>!</h1>
         <a href="#/profile">Edit Profile</a>
+        <div>
+
+        </div>
       </div>
       <div class="row">
         <div class="col-md-12 dashDisplay">
