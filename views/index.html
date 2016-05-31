@@ -46,12 +46,12 @@
         </div>
         <nav style="background-color:#222" class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
           <ul class="nav navbar-nav ">
-            <li> <a href="#/">Login</a></li>
-            <li> <a href="#/logout">Logout</a></li>
-            <li> <a href="#/register">Register</a></li>
-            <li class="hideDash"> <a href="#/pro">Profile</a></li>
-            <li class="hideDash"> <a href="#/dash">Dash</a></li>
-            <li class="hideDash"> <a href="#/settings">Settings</a></li>
+            <li class="collapsed loggedIn"data-toggle="collapse" data-target=".bs-navbar-collapse"> <a href="#/">Login</a></li>
+            <li class="collapsed"data-toggle="collapse" data-target=".bs-navbar-collapse"> <a href="#/logout">Logout</a></li>
+            <li class="collapsed loggedIn"data-toggle="collapse" data-target=".bs-navbar-collapse"> <a href="#/register">Register</a></li>
+            <li class="hideDash collapsed"data-toggle="collapse" data-target=".bs-navbar-collapse"> <a href="#/pro">Profile</a></li>
+            <li class="hideDash collapsed"data-toggle="collapse" data-target=".bs-navbar-collapse"> <a href="#/dash">Dash</a></li>
+            <li class="hideDash collapsed"data-toggle="collapse" data-target=".bs-navbar-collapse"> <a href="#/settings">Settings</a></li>
           </ul>
         </nav>
 
@@ -230,6 +230,7 @@
 
       <div class="col-md-4" id="showHere">
         <h1></h1>
+        <div class="content-here"></div>
       </div>
       <!-- end of col md-4 -->
 
@@ -298,7 +299,7 @@
         <h1>Welcome to your dash <span class="name"></span>!</h1>
         <a href="#/profile">Edit Profile</a>
         <div>
-
+          <div class="content-here"></div>
         </div>
       </div>
       <div class="row">
@@ -422,6 +423,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/path.js/0.8.4/path.min.js" ></script>
     <!-- <script src="templates/js/shop.js" ></script> -->
     <script src="javascript/main.js" ></script>
+
     <script src="javascript/app.js" ></script>
 
 

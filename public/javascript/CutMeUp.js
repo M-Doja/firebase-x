@@ -1,8 +1,6 @@
 (function (jQuery, Firebase, Path) {
     "use strict";
     $(".hideDash").css("display", "none");
-    $(".loggedIn").css("display", "inline-block");
-
 
     // the main firebase reference
     var rootRef = new Firebase('https://shakedown.firebaseio.com/');
@@ -39,10 +37,6 @@
             if (authData.uid === key) {
               var currentUserName = childData.name;
               $(".name").html( currentUserName )
-              $(".content-here").html(
-                '<p class="Name">'+currentUserName+'</p><br><img class="Photo" src='+childData.photo+' alt="Self Image">'
-
-              );
               console.log('Right now ' + childData.name + ', with user ID:' + authData.uid + ' is logged in');
             }
           });
@@ -208,7 +202,6 @@ function getName(authData) {
                 deferred.resolve(user);
             }
         });
-        $(".loggedIn").css("display", "none");
         return deferred.promise();
     };
 
@@ -225,7 +218,6 @@ function getName(authData) {
                 deferred.resolve(user);
             }
         });
-          $(".loggedIn").css("display", "none");
           $("#hideDash").css("display", "inline");
         return deferred.promise();
     }
@@ -266,7 +258,6 @@ function getName(authData) {
                 deferred.reject(err);
             }
         });
-        $(".loggedIn").css("display", "none");
         return deferred.promise();
     }
 

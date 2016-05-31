@@ -52,43 +52,19 @@ div .modal-content {  max-width: 1100px;  margin:0 auto;}
 #theTarget {  padding-left: 300px;}
 figure img {border-radius: 8px;margin-top: 10px;}
 
-/*BLOG PAGE*/
-.navText {
-  display: inline;
-  text-align: center;
-  padding-left:50px;
-  padding-right: 50px;
-  margin:20px;
-  font-size: 2em;
-  color: white;
-  /*background-color: rgb(240, 53, 4);*/
-
-}
-.form {
-  margin-left: 250px;
-}
-#blogPost  {
-  max-height: 700px;
-  max-width: 900px;
-  background-color:rgb(175, 188, 198);
-  color:red;
-}
-
-
-/*FOOD PAGE*/
-#restName {  margin-top: -500px;  margin-bottom: 400px;  margin-left: 700px;
-  font-size: 5em;}
-.push .menu-lk {  margin-top:0px;  margin-bottom:40px;  font-family:Lobster;
-  font-size:3.5em;  text-align: center;  padding: 25px;}
-#menu li a {  width: 160px;  margin-bottom: 20px;}
-#menuBtn {  margin-top: 10px;}
-#menuBtn h3 {  margin:10px auto;  font-size:2em;}
-
 
 /*STORE PAGE*/
 .box {display: inline-block;height:140px;width:140px;border: 2px black solid;margin-bottom: 10px;margin-left: 2px;}
 
+/*=====================================================
+  START--------  NEW STYLES FOR PROFILE PAGE
+=====================================================*/
+.content-here .Name {font-size: 1.3em;font-weight: bold;margin:25px auto -10px; }
+.content-here .Photo {margin:0 auto 25px auto;}
 
+/*=====================================================
+  END------------  NEW STYLES FOR PROFILE PAGE
+=====================================================*/
 
 
 #animatedModal.animated {background-color: black;}
